@@ -18,13 +18,13 @@ class XylophoneApp extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                buildKey(1, Colors.red),
-                buildKey(2, Colors.orange),
-                buildKey(3, Colors.yellow),
-                buildKey(4, Colors.green),
-                buildKey(5, Colors.teal),
-                buildKey(6, Colors.blue),
-                buildKey(7, Colors.purple),
+                buildKey(no: 1, c: Colors.red),
+                buildKey(no: 2, c: Colors.orange),
+                buildKey(no: 3, c: Colors.yellow),
+                buildKey(no: 4, c: Colors.green),
+                buildKey(no: 5, c: Colors.teal),
+                buildKey(no: 6, c: Colors.blue),
+                buildKey(no: 7, c: Colors.purple),
               ],
             ),
           ),
@@ -33,7 +33,7 @@ class XylophoneApp extends StatelessWidget {
     );
   }
 
-  Widget buildKey(int no, Color c) {
+  Widget buildKey({int no, Color c}) {
     return Expanded(
       child: FlatButton(
         onPressed: () => playSound(no),
