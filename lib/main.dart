@@ -16,6 +16,7 @@ class XylophoneApp extends StatelessWidget {
         body: SafeArea(
           child: Container(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Expanded(
                   child: FlatButton(
