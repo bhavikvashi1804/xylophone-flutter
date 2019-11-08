@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
+import 'package:audioplayers/audio_cache.dart';
 
 void main() => runApp(XylophoneApp());
 
@@ -14,8 +14,58 @@ class XylophoneApp extends StatelessWidget {
         ),
         body: SafeArea(
           child: Container(
-            child: Center(
-              child: Text(nouns.last),
+            child: Column(
+              children: <Widget>[
+                FlatButton(
+                  onPressed: () {
+                    final AudioCache player = AudioCache();
+                    player.play('note1.wav');
+                  },
+                  color: Colors.red,
+                ),
+                FlatButton(
+                  onPressed: () {
+                    final AudioCache player = AudioCache();
+                    player.play('note2.wav');
+                  },
+                  color: Colors.orange,
+                ),
+                FlatButton(
+                  onPressed: () {
+                    final AudioCache player = AudioCache();
+                    player.play('note3.wav');
+                  },
+                  color: Colors.yellow,
+                ),
+                FlatButton(
+                  onPressed: () {
+                    final AudioCache player = AudioCache();
+                    player.play('note4.wav');
+                  },
+                  color: Colors.green,
+                ),
+                FlatButton(
+                  onPressed: () {
+                    final AudioCache player = AudioCache();
+                    player.play('note5.wav');
+                  },
+                  color: Colors.teal,
+                ),
+                FlatButton(
+                  onPressed: () {
+                    final AudioCache player = AudioCache();
+                    player.play('note6.wav');
+                  },
+                  color: Colors.blue,
+                ),
+                FlatButton(
+                  onPressed: () {
+                    final AudioCache player = AudioCache();
+                    player.play('note7.wav');
+                  },
+                  color: Colors.purple,
+                ),
+              ],
             ),
           ),
         ),
