@@ -18,52 +18,26 @@ class XylophoneApp extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () => playSound(1),
-                    color: Colors.red,
-                  ),
-                ),
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () => playSound(2),
-                    color: Colors.orange,
-                  ),
-                ),
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () => playSound(3),
-                    color: Colors.yellow,
-                  ),
-                ),
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () => playSound(4),
-                    color: Colors.green,
-                  ),
-                ),
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () => playSound(5),
-                    color: Colors.teal,
-                  ),
-                ),
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () => playSound(6),
-                    color: Colors.blue,
-                  ),
-                ),
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () => playSound(7),
-                    color: Colors.purple,
-                  ),
-                ),
+                buildKey(1, Colors.red),
+                buildKey(2, Colors.orange),
+                buildKey(3, Colors.yellow),
+                buildKey(4, Colors.green),
+                buildKey(5, Colors.teal),
+                buildKey(6, Colors.blue),
+                buildKey(7, Colors.purple),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget buildKey(int no, Color c) {
+    return Expanded(
+      child: FlatButton(
+        onPressed: () => playSound(no),
+        color: c,
       ),
     );
   }
